@@ -1,0 +1,17 @@
+.footer-custom {
+    background-color: #757b8e; /* Naranja intenso */
+    color: #1f1f1f; /* Texto en blanco */
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  .footer-link {
+    color: #ffffff; /* Enlaces en blanco */
+    text-decoration: none;
+  }
+  
+  .footer-link:hover {
+    color: #6a0dad; /* Color morado al pasar el mouse */
+  }
+  
