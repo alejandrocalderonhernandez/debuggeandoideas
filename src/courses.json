@@ -1,0 +1,59 @@
+[
+    {
+      "name": "Spring Boot: Domina todos los Módulos más relevantes",
+      "description": "Aprende a crear proyectos empresariales con Spring Boot 3 y Spring Framework 6. Domina todos los módulos y herramientas más relevantes",
+      "nivel": "intermedio",
+      "img": "/covers/spring.png",
+      "url": "udemy.com",
+      "borderColor": "#9fea32"
+    },
+    {
+      "name": "Master en Spring Data JPA, Hibernate y Java",
+      "description": "Aprende a implementar JPA y Hibernate con Java, usando Spring Data, H2, MySQL y PostgreSQL de manera profesional así como las mejores prácticas.",
+      "nivel": "intermedio",
+      "img": "/covers/data.png",
+      "url": "udemy.com",
+      "borderColor": "#9fea32"
+    },
+    {
+      "name": "Microservicios con Spring Cloud y Spring",
+      "description": "Aprende a crear microservicios modernos y escalables con Spring Boot, Spring Cloud, DDD y Docker en su versión más reciente",
+      "nivel": "intermedio-avanzado",
+      "img": "/covers/ms.png",
+      "url": "udemy.com",
+      "borderColor": "#9fea32"
+    },
+    {
+      "name": "Mockito Junit y Spring Boot Test: La Guía Definitiva",
+      "description": "Aprende a diseñar y crear pruebas unitarias con Mockito, Junit5 y Spring Boot con un enfoque totalmente práctico",
+      "nivel": "intermedio",
+      "img": "/covers/test.png",
+      "url": "udemy.com",
+      "borderColor": "#9fea32"
+    },
+    {
+      "name": "Spring Security 6: Desde las Bases hasta OAUTH2 y JWT",
+      "description": "Aprende a crear aplicaciones seguras con Spring Security 6, Basic Authentication, OAuth2 y JWT totalmente actualizado",
+      "nivel": "intermedio",
+      "img": "/covers/security.png",
+      "url": "udemy.com",
+      "borderColor": "#9fea32"
+    },
+    {
+      "name": "Programación Funcional: Expresiones Lambda y Streams en Java",
+      "description": "Aprende el paradigma de la programación funcional, expresiones lambda y uso de streams desde Java 8 hasta novedades en Java 21",
+      "nivel": "básico-intermedio",
+      "img": "/covers/lambda.png",
+      "url": "udemy.com",
+      "borderColor": "#9fea32"
+    },
+    {
+      "name": "Aprende las Corrutinas y Flows de Kotlin a Profundidad",
+      "description": "Aprende la programación asíncrona con coroutines de Kotlin, una alternativa a los Java Threads",
+      "nivel": "intermedio",
+      "img": "/covers/coroutines.png",
+      "url": "udemy.com",
+      "borderColor": "#9fea32"
+    }
+]
+  
