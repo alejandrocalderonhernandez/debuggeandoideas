@@ -4,8 +4,9 @@ import './CourseDetailComponent.css';
 import courses from '../../courses.json'; // Asegúrate de que la ruta sea correcta
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import useCourseUrl from '../../hooks/useCourseUrl';
 
-// Definir la interfaz para un curso individual (opcional)
+// Definir la interfaz para un curso individual
 interface Course {
   id: number;
   name: string;
@@ -13,11 +14,15 @@ interface Course {
   description: string;
   fullDescription: string;
   topics: string[];
+  cover: string;
 }
 
 const CourseDetailComponent: React.FC = () => {
   const { id } = useParams<{ id: string }>(); // Obtén el ID de los parámetros de la URL
   const course = courses.find((course) => course.id === parseInt(id || '0'));
+
+  // Usa el hook para obtener la URL del curso con el cupón
+  const courseUrl = useCourseUrl(parseInt(id || '0'));
 
   if (!course) {
     return <p>Curso no encontrado</p>;
@@ -48,8 +53,11 @@ const CourseDetailComponent: React.FC = () => {
         </ul>
 
         {/* Botón de compra */}
-        <button className="buy-button">
-            <FontAwesomeIcon icon={faShoppingCart} className="icon" /> Comprar con descuento en Udemy
+        <button 
+          className="buy-button" 
+          onClick={() => courseUrl && window.open(courseUrl, '_blank')}
+        >
+          <FontAwesomeIcon icon={faShoppingCart} className="icon" /> Comprar con descuento en Udemy
         </button>
       </div>
     </div>

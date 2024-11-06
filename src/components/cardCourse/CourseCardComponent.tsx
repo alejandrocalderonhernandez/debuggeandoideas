@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTag, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import useCourseUrl from '../../hooks/useCourseUrl'; 
 
 interface CourseProps {
   name: string;
@@ -20,8 +21,11 @@ const CourseCardComponent: React.FC<CourseProps> = ({
   img,
   url,
   borderColor,
-  id, // Asegúrate de pasar el ID
+  id, 
 }) => {
+  // Usa el hook para obtener la URL con el cupón
+  const courseUrl = useCourseUrl(id);
+
   return (
     <div
       className="card text-white mb-4"
@@ -44,7 +48,7 @@ const CourseCardComponent: React.FC<CourseProps> = ({
 
         <div className="d-flex flex-column">
           <a
-            href={`${url}?coupon=YOUR_COUPON_CODE`}
+            href={courseUrl || '#'}
             className="btn btn-primary mb-2"
             target="_blank"
             rel="noopener noreferrer"
