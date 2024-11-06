@@ -4,18 +4,18 @@ import { faNewspaper, faCalendar, faHome } from '@fortawesome/free-solid-svg-ico
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import logo from '../../assets/logo.png'; // Asegúrate de que la ruta sea correcta
 
-
 const NavBarComponent: React.FC = () => {
   return (
-    <Navbar style={{ backgroundColor: '#6a0dad', color: '#ffffff' }} fixed="top" expand="lg">
+    <Navbar style={{ backgroundColor: '#6a0dad' }} fixed="top" expand="lg">
       <Container>
         {/* Logo */}
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="/" style={{ color: '#ffffff' }}>
           <img
             src={logo}
             width="40"
             height="40"
             className="d-inline-block align-top"
+            alt="Logo"
           />
           {' '} 
           Debuggeando ideas
@@ -24,16 +24,17 @@ const NavBarComponent: React.FC = () => {
         {/* Menú de Navegación */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto"> {/* ms-auto para alinear a la derecha */}
-          <Nav.Link href="#news">
+          <Nav className="ms-auto">
+            {/* ms-auto para alinear a la derecha */}
+            <Nav.Link href="#news" style={{ color: '#ffffff' }}>
               <FontAwesomeIcon icon={faHome} className="me-2" />
               Inicio 
             </Nav.Link>
-            <Nav.Link href="#news">
+            <Nav.Link href="#news" style={{ color: '#ffffff' }}>
               <FontAwesomeIcon icon={faNewspaper} className="me-2" />
               Noticias
             </Nav.Link>
-            <Nav.Link href="#upcoming">
+            <Nav.Link href="#upcoming" style={{ color: '#ffffff' }}>
               <FontAwesomeIcon icon={faCalendar} className="me-2" />
               Próximos Lanzamientos
             </Nav.Link>

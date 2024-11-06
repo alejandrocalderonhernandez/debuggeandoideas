@@ -5,6 +5,10 @@ import courses from '../../courses.json';
 const ContainerCourseCardsContainer: React.FC = () => {
   return (
     <div className="container my-4">
+
+      <br />
+
+      <br />
       <div className="row">
         {courses.map((course, index) => (
           <div className="col-md-4 mb-4" key={index}>
@@ -15,6 +19,7 @@ const ContainerCourseCardsContainer: React.FC = () => {
               img={course.img}
               url={course.url}
               borderColor={course.borderColor}
+              id={course.id}
             />
           </div>
         ))}

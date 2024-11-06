@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTag, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 interface CourseProps {
   name: string;
@@ -9,6 +10,7 @@ interface CourseProps {
   img: string;
   url: string;
   borderColor: string;
+  id: number;
 }
 
 const CourseCardComponent: React.FC<CourseProps> = ({
@@ -18,6 +20,7 @@ const CourseCardComponent: React.FC<CourseProps> = ({
   img,
   url,
   borderColor,
+  id, // Asegúrate de pasar el ID
 }) => {
   return (
     <div
@@ -26,14 +29,12 @@ const CourseCardComponent: React.FC<CourseProps> = ({
         border: `2px solid ${borderColor}`,
         backgroundColor: '#343a40',
         maxWidth: '18rem',
-        height: '33rem', // Tamaño fijo de altura
-        overflow: 'hidden', // Oculta el contenido que sobrepasa el área
+        height: '33rem',
+        overflow: 'hidden',
       }}
     >
-      {/* Imagen en la parte superior */}
       <img src={img} className="card-img-top" alt={name} />
 
-      {/* Contenido de la tarjeta */}
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
         <p className="card-text">{description}</p>
@@ -41,7 +42,6 @@ const CourseCardComponent: React.FC<CourseProps> = ({
           <small>Nivel: {nivel}</small>
         </p>
 
-        {/* Botones con íconos, uno debajo del otro */}
         <div className="d-flex flex-column">
           <a
             href={`${url}?coupon=YOUR_COUPON_CODE`}
@@ -51,14 +51,9 @@ const CourseCardComponent: React.FC<CourseProps> = ({
           >
             <FontAwesomeIcon icon={faTag} /> Obtener cupón
           </a>
-          <a
-            href={url}
-            className="btn btn-secondary"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to={`/course/${id}`} className="btn btn-secondary">
             <FontAwesomeIcon icon={faInfoCircle} /> Más información
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,59 +1,177 @@
 [
-    {
-      "name": "Spring Boot: Domina todos los Módulos más relevantes",
-      "description": "Aprende a crear proyectos empresariales con Spring Boot 3 y Spring Framework 6. Domina todos los módulos y herramientas más relevantes",
-      "nivel": "intermedio",
-      "img": "/covers/spring.png",
-      "url": "udemy.com",
-      "borderColor": "#9fea32"
-    },
-    {
-      "name": "Master en Spring Data JPA, Hibernate y Java",
-      "description": "Aprende a implementar JPA y Hibernate con Java, usando Spring Data, H2, MySQL y PostgreSQL de manera profesional así como las mejores prácticas.",
-      "nivel": "intermedio",
-      "img": "/covers/data.png",
-      "url": "udemy.com",
-      "borderColor": "#9fea32"
-    },
-    {
-      "name": "Microservicios con Spring Cloud y Spring",
-      "description": "Aprende a crear microservicios modernos y escalables con Spring Boot, Spring Cloud, DDD y Docker en su versión más reciente",
-      "nivel": "intermedio-avanzado",
-      "img": "/covers/ms.png",
-      "url": "udemy.com",
-      "borderColor": "#9fea32"
-    },
-    {
-      "name": "Mockito Junit y Spring Boot Test: La Guía Definitiva",
-      "description": "Aprende a diseñar y crear pruebas unitarias con Mockito, Junit5 y Spring Boot con un enfoque totalmente práctico",
-      "nivel": "intermedio",
-      "img": "/covers/test.png",
-      "url": "udemy.com",
-      "borderColor": "#9fea32"
-    },
-    {
-      "name": "Spring Security 6: Desde las Bases hasta OAUTH2 y JWT",
-      "description": "Aprende a crear aplicaciones seguras con Spring Security 6, Basic Authentication, OAuth2 y JWT totalmente actualizado",
-      "nivel": "intermedio",
-      "img": "/covers/security.png",
-      "url": "udemy.com",
-      "borderColor": "#9fea32"
-    },
-    {
+  {
+    "id": 1,
+    "name": "Spring Boot: Domina todos los Módulos más relevantes",
+    "description": "Aprende a crear proyectos empresariales con Spring Boot 3 y Spring Framework 6. Domina todos los módulos y herramientas más relevantes",
+    "nivel": "intermedio",
+    "img": "/covers/spring.png",
+    "cover": "/covers/spring-cover.png",
+    "url": "https://www.udemy.com/course/spring-boot-3-y-spring-framework-6-2023/",
+    "borderColor": "#9fea32",
+    "fullDescription": "Domina el backend con Spring Boot 3 y Spring Framework 6. Aprende desde fundamentos hasta técnicas avanzadas con proyectos reales, integrando Docker, MongoDB, Redis, RabbitMQ y más. Incluye seguridad con OAuth2, OpenAPI y prácticas con Java 11/17, Jackson, Redisson y patrones de diseño.",
+    "topics": [
+      "Fundamentos de Spring Boot 3 y Spring Framework 6",
+      "Desarrollo de aplicaciones web con Spring web",
+      "Integración con MongoDB y PostgreSQL",
+      "Cache y manejo de datos con Redis",
+      "Craer anotacions con spring AOP",
+      "Envío de correos con spring mail",
+      "Hojas de calculo excel con apache poi",
+      "Seguridad con OAuth2 y JWT",
+      "Documentación de APIs con OpenAPI",
+      "Spring Data JPA y consultas avanzadas",
+      "Spring web client",
+      "Gestión de dependencias con Spring Context",
+      "Integración con RabbitMQ y mensajería",
+      "Testing con Postman y Swagger",
+      "Manejo de excepciones con spring",
+      "Patrones de diseño en Spring"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Master en Spring Data JPA, Hibernate y Java",
+    "description": "Aprende a implementar JPA y Hibernate con Java, usando Spring Data, H2, MySQL y PostgreSQL de manera profesional así como las mejores prácticas.",
+    "nivel": "intermedio",
+    "img": "/covers/data.png",
+    "cover": "/covers/data-cover.png",
+    "url": "https://www.udemy.com/course/master-en-spring-data-jpa-hibernate-y-java/",
+    "borderColor": "#9fea32",
+    "fullDescription": "Domina la persistencia en Java con Spring Data JPA, Hibernate y bases de datos como PostgreSQL y MySQL. Aprende JPA vs JDBC, mapeo avanzado de entidades, consultas con JPQL, transacciones, manejo de DTOs y el ciclo de vida de las entidades, todo en un curso avanzado y práctico.",
+    "topics": [
+      "Introducción a JPA y Hibernate",
+      "Configuración de PostgreSQL y MySQL",
+      "Mapeo de relaciones entre entidades",
+      "Consultas avanzadas con JPQL",
+      "Implementación de CRUD en Spring Data",
+      "Gestión de transacciones en JPA",
+      "Manejo de DTOs y MapStruct",
+      "Optimización de consultas y paginación",
+      "Control de versiones y cambios en la BD",
+      "Uso de UUIDs y claves compuestas",
+      "Patrones de diseño para persistencia",
+      "Introducción a H2 como base de datos de prueba"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Microservicios con Spring Cloud y Spring",
+    "description": "Aprende a crear microservicios modernos y escalables con Spring Boot, Spring Cloud, DDD y Docker en su versión más reciente",
+    "nivel": "intermedio-avanzado",
+    "img": "/covers/ms.png",
+    "cover": "/covers/ms-cover.png",
+    "url": "https://www.udemy.com/course/microservicios-con-spring-cloud-y-spring-boot/",
+    "borderColor": "#9fea32",
+    "fullDescription": "Domina Microservicios con Spring Boot y Spring Cloud en su ultima versión. Aprende Eureka, Circuit Breaker, Feign, Config Server, Kafka, OAuth2, DDD y más. Implementa sistemas robustos con Docker y REST APIs. Curso actualizado con las últimas versiones de Spring Boot y Cloud.",
+    "topics": [
+      "Introducción a Microservicios y Spring Cloud",
+      "Registro de servicios con Eureka",
+      "Balanceo de carga con Spring Cloud Load Balancer",
+      "Circuit Breaker con Resilience4j",
+      "Comunicación entre servicios con Feign",
+      "Configuración centralizada con Config Server",
+      "Streams y Kafka para microservicios",
+      "Implementación de Gateway y seguridad con OAuth2",
+      "Despliegue de microservicios con Docker",
+      "Manejo de errores y tracing con Zipkin",
+      "Domain-Driven Design (DDD) en microservicios",
+      "Integración con spring cloud steams y kafka",
+      "Persistencia distribuida con MongoDB y Kafka",
+      "Documentación de APIs con Swagger y OpenAPI"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Mockito Junit y Spring Boot Test: La Guía Definitiva",
+    "description": "Aprende a diseñar y crear pruebas unitarias con Mockito, Junit5 y Spring Boot con un enfoque totalmente práctico",
+    "nivel": "intermedio",
+    "img": "/covers/test.png",
+    "cover": "/covers/test-cover.png",
+    "url": "https://www.udemy.com/course/mockito-spring-boot-test-la-guia-definitiva-2023/",
+    "borderColor": "#9fea32",
+    "fullDescription": "Aprende Mockito y JUnit para testing en Java. Cubre mocks, spies, captors, matchers, y testing de métodos finales, estáticos y void. Incluye BDD, Spring Boot Test, @DataJpaTest, @WebMvcTest, y configuración de perfiles. Ideal para pruebas unitarias y simulación de servidores en Spring Boot.",
+    "topics": [
+      "Introducción a pruebas unitarias y Mockito",
+      "Creación y configuración de Mocks",
+      "Uso de spies y diferencia con mocks",
+      "Pruebas con JUnit 5 y Spring Boot Test",
+      "Matchers y Argument Captors",
+      "Pruebas de métodos que lanzan excepciones",
+      "Testing de métodos void y finales",
+      "Uso de BDD en pruebas con Mockito",
+      "Configuración de perfiles de prueba en Spring",
+      "@MockBean",
+      "Pruebas de Repositorios JPA con @DataJpaTest",
+      "Mock de servisor para test de controllers"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Spring Security 6: Desde las Bases hasta OAUTH2 y JWT",
+    "description": "Aprende a crear aplicaciones seguras con Spring Security 6, Basic Authentication, OAuth2 y JWT totalmente actualizado",
+    "nivel": "intermedio",
+    "img": "/covers/security.png",
+    "cover": "/covers/security-cover.png",
+    "url": "https://www.udemy.com/course/spring-security-6-desde-las-bases-hasta-oauth2-y-jwt/",
+    "borderColor": "#9fea32",
+    "fullDescription": "Domina Spring Security 6 y su arquitectura para autenticación y autorización en aplicaciones web. Aprende CORS, CSRF, JWT, OAuth2, seguridad a nivel de método, roles, administración de usuarios y filtros. Ideal para gestionar acceso y protección en proyectos Spring.",
+    "topics": [
+      "Introducción a Spring Security y autenticación",
+      "Manejo de roles y privilegios",
+      "Configuración de seguridad con CORS y CSRF",
+      "JWT para autenticación en aplicaciones",
+      "OAuth2 y control de acceso de usuarios",
+      "Configuración de seguridad a nivel de método",
+      "Filtros de seguridad en Spring",
+      "User Details Service y administración de usuarios",
+      "Integración con Spring Boot y MVC",
+      "Autenticación con OAuth2 y JWT"
+    ]
+  },
+  {
+      "id": 6,
       "name": "Programación Funcional: Expresiones Lambda y Streams en Java",
       "description": "Aprende el paradigma de la programación funcional, expresiones lambda y uso de streams desde Java 8 hasta novedades en Java 21",
       "nivel": "básico-intermedio",
       "img": "/covers/lambda.png",
-      "url": "udemy.com",
-      "borderColor": "#9fea32"
+      "cover": "/covers/lambda-cover.png",
+      "url": "https://www.udemy.com/course/programacion-funcional-expresiones-lambda-y-streams-en-java/",
+      "borderColor": "#9fea32",
+      "fullDescription": "Domina Expresiones Lambda, Programación Funcional y Streams en Java. Aprende desde fundamentos hasta patrones de diseño, manejo de colecciones con Collectors, concurrencia, paralelismo, y el uso de interfaces funcionales. Actualizado hasta Java 18, incluye librerías como Lombok y Jackson.",
+      "topics": [
+        "Fundamentos de programación funcional en Java",
+        "Expresiones Lambda y su sintaxis",
+        "Uso de Streams para manejo de datos",
+        "Operadores intermedios y finales en Streams",
+        "Patrones de diseño usando lambdas",
+        "Uso avanzado de Collectors",
+        "Concurrencia y paralelismo en programación funcional con streams",
+        "Interfaz java.util.function y sus variantes",
+        "Referencias a métodos en Java",
+        "Transformación y filtrado de colecciones",
+        "Aplicaciones reales de las expresiones lambda"
+      ]
     },
     {
+      "id": 7,
       "name": "Aprende las Corrutinas y Flows de Kotlin a Profundidad",
       "description": "Aprende la programación asíncrona con coroutines de Kotlin, una alternativa a los Java Threads",
       "nivel": "intermedio",
       "img": "/covers/coroutines.png",
-      "url": "udemy.com",
-      "borderColor": "#9fea32"
+      "cover": "/covers/coroutines-cover.png",
+      "url": "https://www.udemy.com/course/aprende-las-coroutines-de-kotlin-a-profundidad/",
+      "borderColor": "#9fea32",
+      "fullDescription": "Curso de Coroutines en Kotlin: Aprende programación asincrónica con enfoque práctico. Cubre coroutines, funciones suspendibles, dispatchers, scopes, canales, flows y testing. Ideal para mejorar el rendimiento en desarrollo Android y backend. Requiere conocimientos básicos de Java o Kotlin.",
+      "topics": [
+        "Introducción a la programación asincrónica en Kotlin",
+        "Uso de coroutines y funciones suspendibles",
+        "Manejo de contextos y scopes de coroutines",
+        "Constructores launch y async",
+        "Dispatchers para controlar la ejecución",
+        "Uso de canales para comunicación segura",
+        "Creación y manejo de Flows",
+        "Operadores intermedios y finales en Flows",
+        "Manejo de excepciones y timeouts en coroutines"
+      ]
     }
 ]
-  
