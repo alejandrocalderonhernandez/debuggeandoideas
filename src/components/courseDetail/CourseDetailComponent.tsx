@@ -7,15 +7,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import useCourseUrl from '../../hooks/useCourseUrl';
 
 // Definir la interfaz para un curso individual
-interface Course {
-  id: number;
-  name: string;
-  coverImage: string;
-  description: string;
-  fullDescription: string;
-  topics: string[];
-  cover: string;
-}
+
 
 const CourseDetailComponent: React.FC = () => {
   const { id } = useParams<{ id: string }>(); // Obtén el ID de los parámetros de la URL
