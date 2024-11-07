@@ -1,5 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './NoticesComponent.css';
+import { useQuery } from '@tanstack/react-query';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 // Interfaz para la estructura de un aviso
 interface Notice {
@@ -8,24 +11,22 @@ interface Notice {
   content: string;
 }
 
+// Función para obtener el aviso desde la API
+const fetchNotice = async (): Promise<Notice> => {
+  const response = await fetch('https://api.jsonbin.io/v3/b/672cf03de41b4d34e4504240');
+  const data = await response.json();
+  return data.record; // Devuelve el contenido dentro de "record"
+};
+
 const NoticesComponent: React.FC = () => {
-  const [notice, setNotice] = useState<Notice | null>(null);
+  const { data: notice, isLoading } = useQuery({
+    queryKey: ['notice'],
+    queryFn: fetchNotice,
+    staleTime: 1000 * 60 * 60 * 24, // 24 horas
+  });
 
-  useEffect(() => {
-    // Cargar los datos desde el archivo JSON en la carpeta public
-    fetch('http://localhost:5173/notices.json')
-      .then(response => {
-        console.log('entre')
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => setNotice(data))
-      .catch(error => console.error('Error al cargar el JSON:', error));
-  }, []);
-
-  if (!notice) {
+  if (isLoading) {
+    <FontAwesomeIcon icon={faSpinner} spin size="3x" />
     return <p>Cargando...</p>;
   }
 
@@ -34,7 +35,7 @@ const NoticesComponent: React.FC = () => {
       {/* Imagen del aviso */}
       <div className="notice-image">
         <img
-          src={notice.image}
+          src={notice?.image}
           alt="Notice"
           className="image"
         />
@@ -42,10 +43,10 @@ const NoticesComponent: React.FC = () => {
       
       {/* Contenido del aviso */}
       <div className="notice-content">
-        <h1 className="notice-title">{notice.title}</h1>
+        <h1 className="notice-title">{notice?.title}</h1>
         <textarea 
           className="notice-text-area"
-          defaultValue={notice.content}
+          defaultValue={notice?.content}
           readOnly
         />
       </div>

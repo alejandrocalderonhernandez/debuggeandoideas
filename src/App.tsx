@@ -9,21 +9,23 @@ import NewReleasesComponent from './components/newReleases/NewReleasesComponent'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles.css';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <Router>
-      <NavBarComponent />
-      <main style={{ minHeight: '80vh', padding: '20px' }}>
-        <Routes>
-          <Route path="/" element={<ContainerCourseCardsContainer />} />
-          <Route path="/course/:id" element={<CourseDetailComponent />} />
-          <Route path="/notices/" element={<NoticesComponent />} />
-          <Route path="/upcoming/" element={<NewReleasesComponent />} />
-        </Routes>
-      </main>
-      <FooterComponent />
-    </Router>
+    <div className="app-container">
+      <Router>
+        <NavBarComponent />
+        <main className="main-content" style={{ paddingTop: '60px' }}>
+          <Routes>
+            <Route path="/" element={<ContainerCourseCardsContainer />} />
+            <Route path="/course/:id" element={<CourseDetailComponent />} />
+            <Route path="/notices/" element={<NoticesComponent />} />
+            <Route path="/upcoming/" element={<NewReleasesComponent />} />
+          </Routes>
+        </main>
+        <FooterComponent />
+      </Router>
+    </div>
   );
-}
+};
 
 export default App;

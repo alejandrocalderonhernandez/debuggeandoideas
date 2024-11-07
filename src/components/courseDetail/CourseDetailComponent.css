@@ -77,3 +77,15 @@
     margin-right: 10px;
   }
   
+  /* Ajustes de .course-cover para dispositivos móviles */
+@media (max-width: 768px) {
+  .course-cover {
+    height: 240px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .course-cover {
+    height: 120px; 
+  }
+}

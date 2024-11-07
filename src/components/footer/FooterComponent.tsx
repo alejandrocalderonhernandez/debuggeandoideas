@@ -1,20 +1,32 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faYoutube, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import styles from './FooterComponent.module.css';
 
 const FooterComponent: React.FC = () => {
   return (
     <footer className={styles['footer-custom']}>
       <Container>
-        <Row className="py-3">
-          <Col md={6} className="text-center text-md-start mb-3 mb-md-0">
-            <span>&copy; {new Date().getFullYear()} Debuggeando Ideas. Todos los derechos reservados.</span>
-          </Col>
-          <Col md={6} className="text-center text-md-end">
-            <a href="#privacy" className="footer-link me-3">Política de Privacidad</a>
-            <a href="#terms" className="footer-link">Términos y Condiciones</a>
-          </Col>
-        </Row>
+        <div className={styles['footer-text']}>
+          &copy; {new Date().getFullYear()} Debuggeando Ideas. Todos los derechos reservados.
+        </div>
+
+        {/* Iconos de redes sociales */}
+        <div className={styles['footer-icons']}>
+          <a href="https://www.youtube.com/@debuggeandoideas1756" target="_blank" rel="noopener noreferrer" className={styles['footer-link']}>
+            <FontAwesomeIcon icon={faYoutube} />
+          </a>
+          <a href="https://www.linkedin.com/in/rene-alejandro-calderón-hernández-1bb0a216b" target="_blank" rel="noopener noreferrer" className={styles['footer-link']}>
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+          <a href="mailto:debuggeandoideas@gmail.com" className={styles['footer-link']}>
+            <FontAwesomeIcon icon={faEnvelope} />
+          </a>
+        </div>
+
+        
       </Container>
     </footer>
   );

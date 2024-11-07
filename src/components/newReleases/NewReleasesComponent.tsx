@@ -1,5 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './NewReleasesComponent.css';
+import { useQuery } from '@tanstack/react-query';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 // Interfaz para la estructura de una nueva publicación
 interface NewRelease {
@@ -9,24 +12,27 @@ interface NewRelease {
   image: string;
 }
 
+// Función para obtener la nueva publicación desde la API
+const fetchNewRelease = async (): Promise<NewRelease> => {
+  const response = await fetch('https://api.jsonbin.io/v3/b/672cf061e41b4d34e4504258');
+  const data = await response.json();
+  return data.record; // Devuelve el contenido dentro de "record"
+};
+
 const NewReleasesComponent: React.FC = () => {
-  const [newRelease, setNewRelease] = useState<NewRelease | null>(null);
+  const { data: newRelease, isLoading } = useQuery({
+    queryKey: ['newRelease'],
+    queryFn: fetchNewRelease,
+    staleTime: 1000 * 60 * 60 * 24, // 24 horas
+  });
 
-  useEffect(() => {
-    // Cargar los datos desde el archivo JSON en la carpeta public
-    fetch('/newReleases.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => setNewRelease(data))
-      .catch(error => console.error('Error al cargar el JSON:', error));
-  }, []);
-
-  if (!newRelease) {
-    return <p>Cargando...</p>;
+  if (isLoading) {
+    return (
+      <div className="text-center">
+        <FontAwesomeIcon icon={faSpinner} spin size="3x" />
+        <p>Cargando...</p>
+      </div>
+    );
   }
 
   return (
@@ -34,7 +40,7 @@ const NewReleasesComponent: React.FC = () => {
       {/* Imagen de la nueva publicación */}
       <div className="new-release-image">
         <img
-          src={newRelease.image}
+          src={newRelease?.image}
           alt="New Release"
           className="image"
         />
@@ -42,9 +48,9 @@ const NewReleasesComponent: React.FC = () => {
 
       {/* Contenido de la nueva publicación */}
       <div className="new-release-content">
-        <h1 className="new-release-title">{newRelease.title}</h1>
-        <h2 className="new-release-subtitle">{newRelease.subtitle}</h2>
-        <p className="new-release-description">{newRelease.description}</p>
+        <h1 className="new-release-title">{newRelease?.title}</h1>
+        <h2 className="new-release-subtitle">{newRelease?.subtitle}</h2>
+        <p className="new-release-description">{newRelease?.description}</p>
       </div>
     </div>
   );

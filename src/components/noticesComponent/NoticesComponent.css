@@ -40,3 +40,16 @@
     resize: none; /* Evita el redimensionamiento */
     overflow-y: auto;
 }
+
+  /* Ajustes de .course-cover para dispositivos móviles */
+  @media (max-width: 768px) {
+    .notice-image {
+      height: 240px; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .notice-image {
+      height: 120px; 
+    }
+  }

@@ -1,17 +1,33 @@
 .footer-custom {
-    background-color: #757b8e; /* Naranja intenso */
-    color: #1f1f1f; /* Texto en blanco */
-    width: 100%;
-    text-align: center;
-    padding: 15px 0;
-  }
-  
-  .footer-link {
-    color: #ffffff; /* Enlaces en blanco */
-    text-decoration: none;
-  }
-  
-  .footer-link:hover {
-    color: #6a0dad; /* Color morado al pasar el mouse */
-  }
-  
+  background-color: #484f5a;
+  color: #eeeeee;
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5em; /* Tamaño de los iconos */
+  margin: 0 15px; /* Mayor espacio entre iconos */
+}
+
+.footer-link:hover {
+  color: #636264;
+}
+
+.footer-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center; /* Asegura que los iconos se centren */
+  gap: 30px; /* Espacio adicional entre iconos */
+}
+
+.footer-text {
+  margin-bottom: 10px;
+  font-size: 0.8em;
+}
