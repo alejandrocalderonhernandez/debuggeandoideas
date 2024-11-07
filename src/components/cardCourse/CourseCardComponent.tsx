@@ -19,7 +19,6 @@ const CourseCardComponent: React.FC<CourseProps> = ({
   description,
   nivel,
   img,
-  url,
   borderColor,
   id, 
 }) => {
