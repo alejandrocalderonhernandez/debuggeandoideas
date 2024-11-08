@@ -12,7 +12,7 @@ import '../styles.css';
 const App: React.FC = () => {
   return (
     <div className="app-container">
-      <Router>
+      <Router basename="/">
         <NavBarComponent />
         <main className="main-content" style={{ paddingTop: '60px' }}>
           <Routes>
@@ -20,6 +20,7 @@ const App: React.FC = () => {
             <Route path="/course/:id" element={<CourseDetailComponent />} />
             <Route path="/notices/" element={<NoticesComponent />} />
             <Route path="/upcoming/" element={<NewReleasesComponent />} />
+            <Route path="*" element={<ContainerCourseCardsContainer />} />
           </Routes>
         </main>
         <FooterComponent />
