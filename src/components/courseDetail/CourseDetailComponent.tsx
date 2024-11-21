@@ -17,6 +17,7 @@ const CourseDetailComponent: React.FC = () => {
   const courseUrl = useCourseUrl(parseInt(id || '0'));
 
   if (!course) {
+
     return <p>Curso no encontrado</p>;
   }
 

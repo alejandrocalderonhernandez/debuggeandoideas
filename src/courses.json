@@ -9,7 +9,7 @@
     "url": "https://www.udemy.com/course/spring-boot-3-y-spring-framework-6-2023/",
     "borderColor": "#00f774",
     "defaultCupon": "4EDC259C7420F8604ED9",
-    "customCupon": null,
+    "customCupon": "8E71A638FC2DCF470618",
     "fullDescription": "Domina el backend con Spring Boot 3 y Spring Framework 6. Aprende desde fundamentos hasta técnicas avanzadas con proyectos reales, integrando Docker, MongoDB, Redis, RabbitMQ y más. Incluye seguridad con OAuth2, OpenAPI y prácticas con Java 11/17, Jackson, Redisson y patrones de diseño.",
     "topics": [
       "Fundamentos de Spring Boot 3 y Spring Framework 6",
@@ -40,7 +40,7 @@
     "url": "https://www.udemy.com/course/master-en-spring-data-jpa-hibernate-y-java/",
     "borderColor": "#f7bd40",
     "defaultCupon": "57AB6164517D0C706087",
-    "customCupon": null,
+    "customCupon": "2F575540952A05EAE2D5",
     "fullDescription": "Domina la persistencia en Java con Spring Data JPA, Hibernate y bases de datos como PostgreSQL y MySQL. Aprende JPA vs JDBC, mapeo avanzado de entidades, consultas con JPQL, transacciones, manejo de DTOs y el ciclo de vida de las entidades, todo en un curso avanzado y práctico.",
     "topics": [
       "Introducción a JPA y Hibernate",
@@ -67,7 +67,7 @@
     "url": "https://www.udemy.com/course/microservicios-con-spring-cloud-y-spring-boot/",
     "borderColor": "#2c9cff",
     "defaultCupon": "1645B4A62EF6F6D77B7C",
-    "customCupon": null,
+    "customCupon": "C5BAE2DA314E6BDBE894",
     "fullDescription": "Domina Microservicios con Spring Boot y Spring Cloud en su ultima versión. Aprende Eureka, Circuit Breaker, Feign, Config Server, Kafka, OAuth2, DDD y más. Implementa sistemas robustos con Docker y REST APIs. Curso actualizado con las últimas versiones de Spring Boot y Cloud.",
     "topics": [
       "Introducción a Microservicios y Spring Cloud",
@@ -87,6 +87,32 @@
     ]
   },
   {
+    "id": 8,
+    "name": "El arte de Spring Boot",
+    "description": "Aprende Spring boot de una forma revolucionaria y lleva tu conocimiento a otro nivel, curso para todos los desarrolladores(JR, SSR, y SR)",
+    "nivel": "Todos los niveles",
+    "img": "/covers/spring-boot.png",
+    "cover": "/covers/commingsoon.png",
+    "url": "https://www.udemy.com/course/el-arte-de-spring-boot-aprende-de-forma-unica-y-revoluciona/",
+    "borderColor": "#f3dda9",
+    "defaultCupon": "3564EC7B662993D7AB6F",
+    "customCupon": "C73ECC36E930A5AB2B49",
+    "fullDescription": "¿Eres un desarrollador Junior buscando dar el salto a proyectos empresariales reales o un Senior que quiere perfeccionar sus habilidades con Spring? Este curso es perfecto para ti. Aquí te llevaremos paso a paso desde los fundamentos de Java y programación orientada a objetos hasta la creación de proyectos robustos utilizando el ecosistema Spring. ¡Una combinación única de teoría y práctica diseñada para que seas un experto en Spring Framework y Spring Boot!",
+    "topics": [
+      "Aprende hasta el mínimo detalle de Spring Boot",
+      "Implementa patrones de diseño usados por Spring",
+      "Aprende las anotaciones de Spring Boot",
+      "Aprende las anotaciones de Spring Context",
+      "Fundamentos esenciales de Spring Context y Beans",
+      "Conoce cada parte del ciclo de vida de un Bean",
+      "Inyección de dependencias avanzada",
+      "Inversión de control y desacoplamiento del código",
+      "Creación de servicios RESTful",
+      "Spring Data JPA",
+      "Añade seguridad con Spring Security"
+    ]
+  },
+  {
     "id": 4,
     "name": "Mockito Junit y Spring Boot Test: La Guía Definitiva",
     "description": "Aprende a diseñar y crear pruebas unitarias con Mockito, Junit5 y Spring Boot con un enfoque totalmente práctico",
@@ -96,7 +122,7 @@
     "url": "https://www.udemy.com/course/mockito-spring-boot-test-la-guia-definitiva-2023/",
     "borderColor": "#ff1d1d",
     "defaultCupon": "6B7992D6C5A064B90A43",
-    "customCupon": null,
+    "customCupon": "588009263B26464EDB55",
     "fullDescription": "Aprende Mockito y JUnit para testing en Java. Cubre mocks, spies, captors, matchers, y testing de métodos finales, estáticos y void. Incluye BDD, Spring Boot Test, @DataJpaTest, @WebMvcTest, y configuración de perfiles. Ideal para pruebas unitarias y simulación de servidores en Spring Boot.",
     "topics": [
       "Introducción a pruebas unitarias y Mockito",
@@ -123,7 +149,7 @@
     "url": "https://www.udemy.com/course/spring-security-6-desde-las-bases-hasta-oauth2-y-jwt/",
     "borderColor": "#b438fa",
     "defaultCupon": "82BB06409A08503A6ABB",
-    "customCupon": null,
+    "customCupon": "4A8FCBF512DED4E1F573",
     "fullDescription": "Domina Spring Security 6 y su arquitectura para autenticación y autorización en aplicaciones web. Aprende CORS, CSRF, JWT, OAuth2, seguridad a nivel de método, roles, administración de usuarios y filtros. Ideal para gestionar acceso y protección en proyectos Spring.",
     "topics": [
       "Introducción a Spring Security y autenticación",
@@ -139,53 +165,53 @@
     ]
   },
   {
-      "id": 6,
-      "name": "Programación Funcional: Expresiones Lambda y Streams en Java",
-      "description": "Aprende el paradigma de la programación funcional, expresiones lambda y uso de streams desde Java 8 hasta novedades en Java 21",
-      "nivel": "básico-intermedio",
-      "img": "/covers/lambda.png",
-      "cover": "/covers/lambda-cover.png",
-      "url": "https://www.udemy.com/course/programacion-funcional-expresiones-lambda-y-streams-en-java/",
-      "borderColor": "#ff6400",
-      "defaultCupon": "561B354B4BE60EE5A720",
-      "customCupon": null,
-      "fullDescription": "Domina Expresiones Lambda, Programación Funcional y Streams en Java. Aprende desde fundamentos hasta patrones de diseño, manejo de colecciones con Collectors, concurrencia, paralelismo, y el uso de interfaces funcionales. Actualizado hasta Java 18, incluye librerías como Lombok y Jackson.",
-      "topics": [
-        "Fundamentos de programación funcional en Java",
-        "Expresiones Lambda y su sintaxis",
-        "Uso de Streams para manejo de datos",
-        "Operadores intermedios y finales en Streams",
-        "Patrones de diseño usando lambdas",
-        "Uso avanzado de Collectors",
-        "Concurrencia y paralelismo en programación funcional con streams",
-        "Interfaz java.util.function y sus variantes",
-        "Referencias a métodos en Java",
-        "Transformación y filtrado de colecciones",
-        "Aplicaciones reales de las expresiones lambda"
-      ]
-    },
-    {
-      "id": 7,
-      "name": "Aprende las Corrutinas y Flows de Kotlin a Profundidad",
-      "description": "Aprende la programación asíncrona con coroutines de Kotlin, una alternativa a los Java Threads",
-      "nivel": "intermedio",
-      "img": "/covers/coroutines.png",
-      "cover": "/covers/coroutines-cover.png",
-      "url": "https://www.udemy.com/course/aprende-las-coroutines-de-kotlin-a-profundidad/",
-      "borderColor": "#fa89c3",
-      "defaultCupon": "6AF4B1C68408AED5FEE2",
-      "customCupon": null,
-      "fullDescription": "Curso de Coroutines en Kotlin: Aprende programación asincrónica con enfoque práctico. Cubre coroutines, funciones suspendibles, dispatchers, scopes, canales, flows y testing. Ideal para mejorar el rendimiento en desarrollo Android y backend. Requiere conocimientos básicos de Java o Kotlin.",
-      "topics": [
-        "Introducción a la programación asincrónica en Kotlin",
-        "Uso de coroutines y funciones suspendibles",
-        "Manejo de contextos y scopes de coroutines",
-        "Constructores launch y async",
-        "Dispatchers para controlar la ejecución",
-        "Uso de canales para comunicación segura",
-        "Creación y manejo de Flows",
-        "Operadores intermedios y finales en Flows",
-        "Manejo de excepciones y timeouts en coroutines"
-      ]
-    }
+    "id": 6,
+    "name": "Programación Funcional: Expresiones Lambda y Streams en Java",
+    "description": "Aprende el paradigma de la programación funcional, expresiones lambda y uso de streams desde Java 8 hasta novedades en Java 21",
+    "nivel": "básico-intermedio",
+    "img": "/covers/lambda.png",
+    "cover": "/covers/lambda-cover.png",
+    "url": "https://www.udemy.com/course/programacion-funcional-expresiones-lambda-y-streams-en-java/",
+    "borderColor": "#ff6400",
+    "defaultCupon": "561B354B4BE60EE5A720",
+    "customCupon": "7BD820A7AAB162BA4660",
+    "fullDescription": "Domina Expresiones Lambda, Programación Funcional y Streams en Java. Aprende desde fundamentos hasta patrones de diseño, manejo de colecciones con Collectors, concurrencia, paralelismo, y el uso de interfaces funcionales. Actualizado hasta Java 18, incluye librerías como Lombok y Jackson.",
+    "topics": [
+      "Fundamentos de programación funcional en Java",
+      "Expresiones Lambda y su sintaxis",
+      "Uso de Streams para manejo de datos",
+      "Operadores intermedios y finales en Streams",
+      "Patrones de diseño usando lambdas",
+      "Uso avanzado de Collectors",
+      "Concurrencia y paralelismo en programación funcional con streams",
+      "Interfaz java.util.function y sus variantes",
+      "Referencias a métodos en Java",
+      "Transformación y filtrado de colecciones",
+      "Aplicaciones reales de las expresiones lambda"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Aprende las Corrutinas y Flows de Kotlin a Profundidad",
+    "description": "Aprende la programación asíncrona con coroutines de Kotlin, una alternativa a los Java Threads",
+    "nivel": "intermedio",
+    "img": "/covers/coroutines.png",
+    "cover": "/covers/coroutines-cover.png",
+    "url": "https://www.udemy.com/course/aprende-las-coroutines-de-kotlin-a-profundidad/",
+    "borderColor": "#fa89c3",
+    "defaultCupon": "6AF4B1C68408AED5FEE2",
+    "customCupon": null,
+    "fullDescription": "Curso de Coroutines en Kotlin: Aprende programación asincrónica con enfoque práctico. Cubre coroutines, funciones suspendibles, dispatchers, scopes, canales, flows y testing. Ideal para mejorar el rendimiento en desarrollo Android y backend. Requiere conocimientos básicos de Java o Kotlin.",
+    "topics": [
+      "Introducción a la programación asincrónica en Kotlin",
+      "Uso de coroutines y funciones suspendibles",
+      "Manejo de contextos y scopes de coroutines",
+      "Constructores launch y async",
+      "Dispatchers para controlar la ejecución",
+      "Uso de canales para comunicación segura",
+      "Creación y manejo de Flows",
+      "Operadores intermedios y finales en Flows",
+      "Manejo de excepciones y timeouts en coroutines"
+    ]
+  }
 ]
