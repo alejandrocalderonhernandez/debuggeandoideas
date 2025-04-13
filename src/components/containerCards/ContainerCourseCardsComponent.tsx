@@ -15,7 +15,7 @@ interface Course {
 }
 
 const fetchCourses = async (): Promise<Course[]> => {
-  const response = await fetch('https://api.jsonbin.io/v3/b/672cef2cacd3cb34a8a47a22');
+  const response = await fetch('https://api.jsonbin.io/v3/b/67fc43978960c979a5846e88');
   const data = await response.json();
   return data.record; // Devuelve los cursos dentro de "record"
 };
