@@ -2,28 +2,33 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTag, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import useCourseUrl from '../../hooks/useCourseUrl'; 
+import { Course } from '../../types/Course';
 
-interface CourseProps {
-  name: string;
-  description: string;
-  nivel: string;
-  img: string;
-  url: string;
-  borderColor: string;
-  id: number;
-}
-
-const CourseCardComponent: React.FC<CourseProps> = ({
+const CourseCardComponent: React.FC<Course> = ({
+  id,
   name,
   description,
+  fullDescription,
   nivel,
   img,
+  url,
   borderColor,
-  id, 
+  cover,
+  topics,
 }) => {
-  // Usa el hook para obtener la URL con el cupón
-  const courseUrl = useCourseUrl(id);
+
+  const course = {
+    id,
+    name,
+    description,
+    fullDescription,
+    nivel,
+    img,
+    url,
+    borderColor,
+    cover,
+    topics,
+  };
 
   return (
     <div
@@ -47,14 +52,18 @@ const CourseCardComponent: React.FC<CourseProps> = ({
 
         <div className="d-flex flex-column">
           <a
-            href={courseUrl || '#'}
+            href={url}
             className="btn btn-primary mb-2"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faTag} /> Obtener cupón
           </a>
-          <Link to={`/course/${id}`} className="btn btn-secondary">
+          <Link
+            to={`/course/${id}`}
+            state={{ course }}
+            className="btn btn-secondary"
+          >
             <FontAwesomeIcon icon={faInfoCircle} /> Más información
           </Link>
         </div>

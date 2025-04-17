@@ -13,7 +13,7 @@ interface Notice {
 
 // Función para obtener el aviso desde la API
 const fetchNotice = async (): Promise<Notice> => {
-  const response = await fetch('https://api.jsonbin.io/v3/b/672cf03de41b4d34e4504240');
+  const response = await fetch('https://api.jsonbin.io/v3/b/67fc43ad8561e97a50fedea6');
   const data = await response.json();
   return data.record; // Devuelve el contenido dentro de "record"
 };

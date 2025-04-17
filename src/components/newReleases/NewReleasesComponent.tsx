@@ -14,7 +14,7 @@ interface NewRelease {
 
 // Función para obtener la nueva publicación desde la API
 const fetchNewRelease = async (): Promise<NewRelease> => {
-  const response = await fetch('https://api.jsonbin.io/v3/b/672cf061e41b4d34e4504258');
+  const response = await fetch('https://api.jsonbin.io/v3/b/67fc43bd8561e97a50fedeb1');
   const data = await response.json();
   return data.record; // Devuelve el contenido dentro de "record"
 };
