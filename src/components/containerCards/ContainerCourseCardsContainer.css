@@ -1,0 +1,186 @@
+.courses-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  min-height: 60vh;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 3rem;
+  justify-items: center;
+  align-items: start;
+  padding: 1rem 0;
+}
+
+.course-item {
+  width: 100%;
+  max-width: 24rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Loading state styles */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 1.5rem;
+}
+
+.loading-spinner {
+  color: #667eea;
+  filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.4));
+  animation: pulse 2s infinite;
+}
+
+.loading-text {
+  color: #e2e8f0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive breakpoints optimizados */
+
+/* Extra large screens (1400px+) */
+@media (min-width: 1400px) {
+  .courses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  .course-item {
+    max-width: 24rem;
+  }
+}
+
+/* Large screens (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .courses-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    padding: 1rem;
+  }
+  
+  .course-item {
+    max-width: 26rem;
+  }
+}
+
+/* Medium screens (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .courses-container {
+    padding: 2rem 1.5rem;
+  }
+  
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 1rem;
+  }
+  
+  .course-item {
+    max-width: 100%;
+  }
+}
+
+/* Small to Medium screens (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .courses-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .course-item {
+    max-width: 100%;
+  }
+}
+
+/* Small screens (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .courses-container {
+    padding: 1.5rem 0.75rem;
+  }
+  
+  .courses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .course-item {
+    max-width: 20rem;
+  }
+}
+
+/* Extra small screens (below 576px) */
+@media (max-width: 575px) {
+  .courses-container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .course-item {
+    max-width: 18rem;
+  }
+  
+  .loading-text {
+    font-size: 1rem;
+  }
+}
+
+/* Ultra-wide screens (above 1600px) */
+@media (min-width: 1600px) {
+  .courses-container {
+    max-width: 1600px;
+    padding: 3rem 2rem;
+  }
+  
+  .courses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+  }
+}
+
+/* Portrait tablets specific */
+@media (max-width: 1024px) and (orientation: portrait) {
+  .courses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+/* Landscape phones specific */
+@media (max-width: 896px) and (orientation: landscape) and (max-height: 414px) {
+  .courses-container {
+    padding: 1rem;
+  }
+  
+  .courses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+}

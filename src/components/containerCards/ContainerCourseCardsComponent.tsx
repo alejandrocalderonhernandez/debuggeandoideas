@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { useQuery } from '@tanstack/react-query';
 import { Course } from '../../types/Course';
-
+import './ContainerCourseCardsContainer.css';
 
 const fetchCourses = async (): Promise<Course[]> => {
   const response = await fetch('https://api.jsonbin.io/v3/b/67fc43978960c979a5846e88');
@@ -20,32 +20,23 @@ const ContainerCourseCardsContainer: React.FC = () => {
   });
 
   return (
-    <div className="container my-4">
-      <br />
+    <div className="courses-container">
       {isLoading ? (
-        <div className="text-center">
-          <FontAwesomeIcon icon={faSpinner} spin size="3x" />
-          <p>Loading courses...</p>
+        <div className="loading-state">
+          <FontAwesomeIcon icon={faSpinner} spin size="3x" className="loading-spinner" />
+          <p className="loading-text">Cargando cursos increíbles...</p>
         </div>
       ) : (
-        <div className="row">
+        <div className="courses-grid">
           {courses.map((course) => {
             const couponCode = course.customCupon ?? course.defaultCupon;
             const urlWithCoupon = `${course.url}?couponCode=${couponCode}`;
 
             return (
-              <div className="col-md-4 mb-4" key={course.id}>
+              <div className="course-item" key={course.id}>
                 <CourseCardComponent
-                  name={course.name}
-                  description={course.description}
-                  nivel={course.nivel}
-                  img={course.img}
+                  {...course}
                   url={urlWithCoupon}
-                  borderColor={course.borderColor || "#000000"}
-                  id={course.id}
-                  fullDescription={course.fullDescription}
-                  cover={course.cover}
-                  topics={course.topics}
                 />
               </div>
             );

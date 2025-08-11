@@ -1,53 +1,189 @@
 .new-release-detail {
-    width: 100%;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
+  width: 100%;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  position: relative;
+  text-align: center;
+}
+
+.new-release-image {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%);
+}
+
+.new-release-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(102,126,234,0.2) 100%);
+  z-index: 2;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.9) contrast(1.1);
+  transition: transform 0.3s ease;
+}
+
+.new-release-image:hover .image {
+  transform: scale(1.02);
+}
+
+.new-release-content {
+  background: rgba(17, 25, 40, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24px 24px 0 0;
+  margin-top: -40px;
+  position: relative;
+  z-index: 3;
+  padding: 40px;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.new-release-title {
+  font-size: 2.8em;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  color: #ffffff;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+
+.new-release-subtitle {
+  font-size: 1.6em;
+  margin: 20px 0;
+  color: #64b5f6;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 15px;
+  display: inline-block;
+}
+
+.new-release-subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%);
+  border-radius: 2px;
+}
+
+.new-release-description {
+  font-size: 1.2em;
+  color: #e2e8f0;
+  margin-top: 25px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.new-release-description::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 4em;
+  color: rgba(102, 126, 234, 0.3);
+  font-family: serif;
+  line-height: 1;
+}
+
+/* Loading spinner styles */
+.text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  color: #e2e8f0;
+  font-size: 1.2em;
+}
+
+.text-center p {
+  margin-top: 20px;
+  color: #e2e8f0;
+}
+
+/* Responsive design - manteniendo tus media queries originales */
+@media (max-width: 768px) {
   .new-release-image {
-    width: 100%;
-    height: 700px; /* Ajusta la altura de la imagen */
-    overflow: hidden;
-  }
-  
-  .image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: center; /* Centra la imagen */
+    height: 240px; 
   }
   
   .new-release-content {
-    padding: 20px;
+    padding: 30px 20px;
+    margin-top: -30px;
+    border-radius: 20px 20px 0 0;
   }
   
+  .new-release-title {
+    font-size: 2.2em;
+  }
   
   .new-release-subtitle {
-    font-size: 1.5em;
-    margin: 10px 0;
-    color: #449fa5;
-    font-weight: bold;
+    font-size: 1.4em;
   }
   
   .new-release-description {
     font-size: 1.1em;
-    color: #c0c0c0;
-    margin-top: 10px;
-    line-height: 1.6;
-  }
-  
-
-    /* Ajustes de .course-cover para dispositivos móviles */
-@media (max-width: 768px) {
-  .new-release-image {
-    height: 240px; 
+    padding: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .new-release-image {
     height: 120px; 
+  }
+  
+  .new-release-content {
+    padding: 25px 16px;
+    margin-top: -20px;
+  }
+  
+  .new-release-title {
+    font-size: 1.9em;
+  }
+  
+  .new-release-subtitle {
+    font-size: 1.2em;
+  }
+  
+  .new-release-description {
+    font-size: 1em;
+    padding: 18px;
+  }
+  
+  .new-release-description::before {
+    font-size: 3em;
+    top: -5px;
+    left: 15px;
   }
 }

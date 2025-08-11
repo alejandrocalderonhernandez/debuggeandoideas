@@ -26,8 +26,12 @@ const NoticesComponent: React.FC = () => {
   });
 
   if (isLoading) {
-    <FontAwesomeIcon icon={faSpinner} spin size="3x" />
-    return <p>Cargando...</p>;
+    return (
+      <div className="loading-container">
+        <FontAwesomeIcon icon={faSpinner} spin size="3x" className="loading-spinner" />
+        <p>Cargando aviso...</p>
+      </div>
+    );
   }
 
   return (
@@ -44,11 +48,11 @@ const NoticesComponent: React.FC = () => {
       {/* Contenido del aviso */}
       <div className="notice-content">
         <h1 className="notice-title">{notice?.title}</h1>
-        <textarea 
-          className="notice-text-area"
-          defaultValue={notice?.content}
-          readOnly
-        />
+        <div className="notice-content-display">
+          {notice?.content?.split('\n').map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
       </div>
     </div>
   );

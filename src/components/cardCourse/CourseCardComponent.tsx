@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTag, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { Course } from '../../types/Course';
+import './CourseCardComponent.css';
 
 const CourseCardComponent: React.FC<Course> = ({
   id,
@@ -30,39 +31,58 @@ const CourseCardComponent: React.FC<Course> = ({
     topics,
   };
 
+  // CSS custom properties para usar borderColor dinámicamente
+  const cardStyle = {
+    '--border-color': borderColor,
+    '--border-color-40': `${borderColor}40`,
+    '--border-color-60': `${borderColor}60`,
+    '--border-color-80': `${borderColor}80`,
+    '--border-glow': `${borderColor}40`,
+    '--overlay-gradient': `linear-gradient(135deg, ${borderColor}20 0%, transparent 50%, ${borderColor}10 100%)`,
+    '--badge-gradient': `linear-gradient(135deg, ${borderColor}30, ${borderColor}50)`,
+    '--button-gradient': `linear-gradient(135deg, ${borderColor}, ${borderColor}dd)`,
+    '--button-shadow': `${borderColor}50`,
+    '--button-hover-bg': `${borderColor}20`,
+    border: `2px solid ${borderColor}`,
+  } as React.CSSProperties;
+
   return (
     <div
-      className="card text-white mb-4"
-      style={{
-        border: `2px solid ${borderColor}`,
-        backgroundColor: '#343a40',
-        maxWidth: '18rem',
-        height: '33rem',
-        overflow: 'hidden',
-      }}
+      className="course-card text-white"
+      style={cardStyle}
     >
-      <img src={img} className="card-img-top" alt={name} />
+      <div className="image-container">
+        <img 
+          src={img} 
+          className="card-image" 
+          alt={name}
+        />
+        <div className="image-overlay"></div>
+      </div>
 
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
-        <p className="card-text">{description}</p>
-        <p className="card-text">
-          <small>Nivel: {nivel}</small>
-        </p>
+        <p className="card-description">{description}</p>
+        
+        <div className="level-badge">
+          Nivel: {nivel}
+        </div>
 
-        <div className="d-flex flex-column">
+        <div className="button-container">
           <a
             href={url}
-            className="btn btn-primary mb-2"
+            className="primary-button"
             target="_blank"
             rel="noopener noreferrer"
           >
+            <div className="button-glow"></div>
             <FontAwesomeIcon icon={faTag} /> Obtener cupón
           </a>
+          
           <Link
             to={`/course/${id}`}
             state={{ course }}
-            className="btn btn-secondary"
+            className="secondary-button"
           >
             <FontAwesomeIcon icon={faInfoCircle} /> Más información
           </Link>
